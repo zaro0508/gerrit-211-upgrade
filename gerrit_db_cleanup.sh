@@ -21,3 +21,7 @@ mysql -uroot -ppassword reviewdb -e "DELETE FROM account_project_watches WHERE p
 mysql -uroot -ppassword reviewdb -e "DELETE FROM changes WHERE dest_project_name='openstack-ci/gerrit-verification-status-plugin';"
 mysql -uroot -ppassword reviewdb -e "DELETE FROM submodule_subscriptions WHERE submodule_project_name='openstack-ci/gerrit-verification-status-plugin';"
 
+# remove openstack/openstack-puppet
+mysql -uroot -ppassword reviewdb -e "DELETE FROM account_project_watches WHERE project_name='openstack/openstack-puppet';"
+mysql -uroot -ppassword reviewdb -e "DELETE FROM changes WHERE dest_project_name='openstack/openstack-puppet';"
+mysql -uroot -ppassword reviewdb -e "DELETE FROM submodule_subscriptions WHERE submodule_project_name='openstack/openstack-puppet';"
